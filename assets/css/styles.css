@@ -1,0 +1,103 @@
+/* Paleta y ajustes globales */
+:root {
+    --brand-primario: #005387;
+    --azul-secundario: #225f78;
+    --azul-claro: #0089b6;
+    --azul-masclaro: #6093ac;
+
+    /* azul corporativo sugerido */
+    --brand-secundario: #0ea5e9;
+    --brand-accent: #f8d146;
+}
+
+
+.navbar-brand b {
+    letter-spacing: .5px;
+}
+
+
+/* Logo redondo en navbar */
+.brand-logo {
+    width: 34px;
+    height: 34px;
+    background: rgba(0, 83, 135, .12);
+}
+
+
+/* Hero con imagen local + degradado */
+.hero {
+    background: linear-gradient(135deg, rgba(0, 83, 135, .90), rgba(14, 165, 233, .85)),
+        url('../img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.hero .lead {
+    opacity: .95;
+}
+
+
+/* Tarjetas de apps */
+.app-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1.25rem 2rem rgba(0, 0, 0, .08);
+}
+
+
+/* Puntos de estado */
+.badge-dot {
+    width: .6rem;
+    height: .6rem;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: .35rem;
+}
+
+
+/* Títulos de sección */
+.section-title {
+    position: relative;
+    padding-bottom: .5rem;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 64px;
+    height: 3px;
+    background: var(--brand-accent);
+}
+
+
+/* Links generales */
+.link-subdomain {
+    text-decoration: none;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+
+/* Acceso rápido */
+.quick-link:hover {
+    background: rgba(0, 83, 135, .06);
+}
+
+/* texto Color primario */
+.text-primary {
+    color: var(--brand-primario) !important;
+}
+
+/* color Primario */
+.fw-semibold {
+    color: var(--brand-primario) !important;
+}
+
+/* Background color primario */
+.bg-primario {
+    color: var(--brand-primario) !important;
+}

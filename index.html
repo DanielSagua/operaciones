@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es" data-bs-theme="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Operaciones | Portal Corporativo</title>
+    <meta name="description"
+        content="Portal simple de Operaciones para acceder a las aplicaciones internas de la empresa." />
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Estilos propios -->
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+                <span class="brand-logo rounded-circle d-inline-flex align-items-center justify-content-center">
+                    <i class="bi bi-gear-fill text-primary"></i>
+                </span>
+                <span><b>Operaciones WCH</b> · Portal</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+                aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#apps">Aplicaciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#soporte">Soporte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#anuncios">Anuncios</a></li>
+                    <li class="nav-item"><button id="btnTheme" class="btn btn-outline-secondary btn-sm ms-lg-3"
+                            type="button"><i class="bi bi-moon-stars"></i> Tema</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="inicio" class="hero py-5 py-lg-6">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                    <h1 class="display-5 fw-bold">Portal del Área de Operaciones</h1>
+                    <p class="lead mt-3">Punto de entrada a las aplicaciones internas y recursos críticos para
+                        colaboradores. Simple, seguro y directo.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#apps" class="btn btn-warning fw-semibold"><i class="bi bi-grid"></i> Ver
+                            aplicaciones</a>
+                        <a href="#soporte" class="btn btn-outline-light"><i class="bi bi-life-preserver"></i> Soporte
+                            TI</a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <h5 class="card-title mb-3">Acceso rápido</h5>
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <a class="link-subdomain" target="_blank" href="https://subastaswch.wch-ops.cl">
+                                        <div class="quick-link p-3 border rounded-3 d-flex align-items-center gap-3">
+                                            <span class="badge-dot bg-success"></span>
+                                            <div>
+                                                <div class="fw-semibold color-primario">Subastas</div>
+                                                <small class="text-body-secondary">subastaswch.wch-ops.cl</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <a class="link-subdomain" target="_blank" href="https://directorio.empresa.cl">
+                                        <div class="quick-link p-3 border rounded-3 d-flex align-items-center gap-3">
+                                            <span class="badge-dot bg-success"></span>
+                                            <div>
+                                                <div class="fw-semibold">Directorio</div>
+                                                <small class="text-body-secondary">directorio.empresa.cl</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <a class="link-subdomain" target="_blank" href="https://turnos.empresa.cl">
+                                        <div class="quick-link p-3 border rounded-3 d-flex align-items-center gap-3">
+                                            <span class="badge-dot bg-success"></span>
+                                            <div>
+                                                <div class="fw-semibold">Turnos</div>
+                                                <small class="text-body-secondary">turnos.empresa.cl</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <a class="link-subdomain" target="_blank" href="https://porteria.empresa.cl">
+                                        <div class="quick-link p-3 border rounded-3 d-flex align-items-center gap-3">
+                                            <span class="badge-dot bg-secondary"></span>
+                                            <div>
+                                                <div class="fw-semibold">Portería</div>
+                                                <small class="text-body-secondary">porteria.empresa.cl</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mt-3 small text-body-secondary">* Algunas aplicaciones solo funcionan en la red de WCH.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Apps -->
+    <section id="apps" class="py-5">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between gap-3 mb-4">
+                <div>
+                    <h2 class="section-title m-0">Aplicaciones internas</h2>
+                    <p class="text-body-secondary m-0">Acceso centralizado a los sistemas utilizados por los
+                        colaboradores.</p>
+                </div>
+                <div class="w-100 w-md-auto" style="max-width:420px;">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                        <input id="filtroApps" type="search" class="form-control"
+                            placeholder="Buscar aplicación (ej: turnos, directorio)" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="listaApps" class="row g-4">
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 app-item" data-tags="subastas licitaciones ventas">
+                    <div class="card app-card h-100 border-0 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-success-subtle text-success"><i
+                                        class="bi bi-circle-fill me-1 small"></i>Online</span>
+                                <i class="bi bi-hammer"></i>
+                            </div>
+                            <h5 class="card-title">Subastas Internas</h5>
+                            <p class="card-text small text-body-secondary">Publica y licita activos en desuso de la
+                                empresa.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <a class="btn btn-outline-primary" target="_blank" href="https://subastas.empresa.cl">Abrir</a>
+                                <small class="text-body-secondary">subastas.empresa.cl</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 app-item"
+                    data-tags="directorio contactos colaboradores rrhh">
+                    <div class="card app-card h-100 border-0 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-success-subtle text-success"><i
+                                        class="bi bi-circle-fill me-1 small"></i>Online</span>
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <h5 class="card-title">Directorio</h5>
+                            <p class="card-text small text-body-secondary">Búsqueda rápida de anexos, correos y equipos.
+                            </p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <a class="stretched-link" target="_blank" href="https://directorio.empresa.cl">Abrir</a>
+                                <small class="text-body-secondary">directorio.empresa.cl</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 app-item" data-tags="turnos filas tickets clientes">
+                    <div class="card app-card h-100 border-0 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-success-subtle text-success"><i
+                                        class="bi bi-circle-fill me-1 small"></i>Online</span>
+                                <i class="bi bi-123"></i>
+                            </div>
+                            <h5 class="card-title">Gestión de Turnos</h5>
+                            <p class="card-text small text-body-secondary">Entrega de números y panel de atención.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <a class="stretched-link" target="_blank" href="https://turnos.empresa.cl">Abrir</a>
+                                <small class="text-body-secondary">turnos.empresa.cl</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 app-item" data-tags="portería visitas seguridad acceso">
+                    <div class="card app-card h-100 border-0 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-secondary-subtle text-secondary"><i
+                                        class="bi bi-circle me-1 small"></i>Próximamente</span>
+                                <i class="bi bi-shield-lock"></i>
+                            </div>
+                            <h5 class="card-title">Portería</h5>
+                            <p class="card-text small text-body-secondary">Registro de visitas y control de acceso.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center">
+                                <a class="stretched-link disabled" href="#">En preparación</a>
+                                <small class="text-body-secondary">porteria.empresa.cl</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <button class="btn btn-outline-primary" id="btnVerTodo"><i class="bi bi-plus-square"></i> Ver
+                    todas</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soporte -->
+    <section id="soporte" class="py-5 bg-body-tertiary border-top border-bottom">
+        <div class="container">
+            <h2 class="section-title">Soporte TI</h2>
+            <div class="row g-4 pt-2">
+                <div class="col-md-6">
+                    <div class="p-4 border rounded-3 h-100">
+                        <h5 class="mb-3"><i class="bi bi-life-preserver"></i> Mesa de Ayuda</h5>
+                        <p class="text-body-secondary m-0">Para requerimientos de acceso, contraseñas, incidencias y
+                            solicitudes de nuevas aplicaciones, contáctanos.</p>
+                        <ul class="list-unstyled mt-3 mb-0 small">
+                            <li><i class="bi bi-envelope"></i> <a
+                                    href="mailto:soporte@empresa.cl">soporte@empresa.cl</a></li>
+                            <li><i class="bi bi-telephone"></i> +56 2 1234 5678 (Mesa de ayuda)</li>
+                            <li><i class="bi bi-clock"></i> Lunes a Viernes, 09:00–18:00</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4 border rounded-3 h-100">
+                        <h5 class="mb-3"><i class="bi bi-shield-check"></i> Buenas Prácticas</h5>
+                        <ul class="small m-0">
+                            <li>Usa contraseñas robustas y únicas por sistema.</li>
+                            <li>No compartas usuarios; solicita perfiles de acceso.</li>
+                            <li>Reporta correos sospechosos a <a
+                                    href="mailto:seguridad@empresa.cl">seguridad@empresa.cl</a>.</li>
+                            <li>Mantén tu navegador actualizado.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anuncios -->
+    <section id="anuncios" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Anuncios</h2>
+            <div class="row g-4 pt-2">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <span class="badge text-bg-warning mb-2">Mantenimiento</span>
+                            <h5 class="card-title">Intervención de red</h5>
+                            <p class="card-text small text-body-secondary">Hoy 17:30–18:30 se realizarán trabajos en la
+                                sala de servidores. <b>Posible intermitencia</b> en acceso a aplicaciones.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <span class="badge text-bg-success mb-2">Nuevo</span>
+                            <h5 class="card-title">Lanzamiento: Portería</h5>
+                            <p class="card-text small text-body-secondary">Próxima semana abrimos piloto de registro de
+                                visitas con QR. Solicita acceso a TI.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <span class="badge text-bg-primary mb-2">Info</span>
+                            <h5 class="card-title">Manual de Usuario</h5>
+                            <p class="card-text small text-body-secondary">Consulta la guía rápida para el uso de
+                                aplicaciones internas y buenas prácticas de seguridad.</p>
+                            <a class="link-subdomain" href="#" target="_blank">Descargar PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4 bg-body-tertiary border-top">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+            <div class="small">© | DanielS | <span id="year"></span> WCH | Área de Operaciones</div>
+            <div class="small d-flex gap-3">
+                <a href="#">Políticas de uso</a>
+                <a href="#">Privacidad</a>
+                <a href="#inicio">Volver arriba</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
